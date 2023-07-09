@@ -1,0 +1,91 @@
+@font-face {
+    font-family: Fira Sans;
+    src: url(FiraSans-Regular.ttf);
+}
+
+button:hover {
+    transform:scale(.95);
+    cursor:pointer;
+}
+
+button:active {
+    transform:scale(.8);
+    opacity: .75;
+    cursor:pointer;
+}
+
+
+
+ul {
+    list-style-type: none;
+}
+
+
+body {
+    font-family: Fira Sans;
+}
+
+.title,
+.newBookBtn {
+    text-align: center;
+}
+
+.title {
+    margin:30px 0 30px 0;
+    font-size:1.8rem;
+    font-weight:800;
+}
+
+#newBook {
+    outline:none;
+    background:none;
+    border:none;
+    margin-bottom:20px;
+}
+
+#newBook img {
+    position:absolute;
+    top:-3px;
+    left:-30px;
+}
+
+#newBook span {
+font-size:1.1rem;
+font-style: italic;
+color:gray;
+grid-column:2;
+position:relative;
+
+}
+
+#bookCards {
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(30px,400px));
+    column-gap:20px;
+    row-gap:20px;
+    justify-content: space-around;
+    border: solid green;
+}
+
+#bookCards > * {
+    border:solid rgb(145, 145, 145);
+    border-radius:10px;
+    box-shadow: 5px 5px rgba(212, 212, 212, 0.582);
+}
+
+.removeBtn,
+.readBtn {
+margin-left:40px;
+outline: none;
+border:none;
+background:none;
+}
+
+.removeBtn::before{
+content:url(svgs/trash-2.svg);
+}
+
+.readBtn::before{
+content:url(svgs/book-open.svg);
+}
+

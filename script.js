@@ -48,6 +48,13 @@ myLibrary.forEach((book) => {
                 propList.appendChild(bookKey);
             };
         };
+    const rmBtn = document.createElement("button");
+    rmBtn.setAttribute('class',"removeBtn");
+    bookDiv.appendChild(rmBtn);
+
+    const rdBtn = document.createElement("button");
+    rdBtn.setAttribute('class',"readBtn");
+    bookDiv.appendChild(rdBtn);
 
     bookCards.appendChild(bookDiv);
 
@@ -55,3 +62,11 @@ myLibrary.forEach((book) => {
 }
 
 addBooks();
+
+//new book form/button
+const newBtn = document.getElementById("newBook");
+
+newBtn.addEventListener("mousedown", () => {
+alert('clicked!');
+}
+)
