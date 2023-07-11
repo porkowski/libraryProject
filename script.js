@@ -63,10 +63,56 @@ myLibrary.forEach((book) => {
 
 addBooks();
 
+
 //new book form/button
 const newBtn = document.getElementById("newBook");
 
 newBtn.addEventListener("mousedown", () => {
-alert('clicked!');
+    prompt("what is your age?",5);
 }
 )
+
+//grab readBtn and removeBtn to DOM.
+//read Button to switch statu
+const readButton = document.querySelectorAll(".readBtn");
+readButton.forEach((button) => {
+
+    button.addEventListener("mousedown",(button)=> {
+    const divreadElement = button.target.parentElement;
+    const ulRead = divreadElement.querySelector('ul :nth-child(4)');
+
+    if (ulRead.textContent.includes("Yes")||ulRead.textContent.includes("yes")) {
+    //change in actual myLibrary array
+        const index = divreadElement.id;
+        myLibrary[index].read= "No";
+    
+    //display if read or not in html
+        ulRead.textContent = "read: " + myLibrary[index].read;
+        
+
+    } else if (ulRead.textContent.includes("No")||ulRead.textContent.includes("no")) {
+
+        //change in actual myLibrary array
+        const index = divreadElement.id;
+        myLibrary[index].read= "Yes";
+       
+       //display if read or not in html
+           ulRead.textContent = "read: " + myLibrary[index].read;
+        
+           
+    }
+
+})});
+
+
+const removeButton = document.querySelectorAll(".removeBtn");
+removeButton.forEach((button) =>    { 
+
+    button.addEventListener("mousedown",(button)=> {
+    const divElement = button.target.parentElement;
+    const index=divElement.id;
+    //remove from actual library array
+    myLibrary.splice(index,1)
+    //remove from HTML
+    divElement.remove();
+})});

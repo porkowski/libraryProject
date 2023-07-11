@@ -13,6 +13,35 @@
     <div class="title"> Book Library</div>
     <div class="newBookBtn"><button id="newBook"><span><img src="svgs/plus-square.svg" alt="plus symbol">New Book</span></button></div>
     
+    <div id="popupForm">
+        <form action="" method="post">
+            <div class="form-row">
+                <label for="author">Author:<span aria-label="required">*</span></label>
+                <input type="text" id="author" name="author" minlength="2" required>
+            </div>
+            <div class="form-row">
+                <label for="title">Title:<span aria-label="required">*</span></label>
+                <input type="text" id="title" name="title" minlength="2" required>
+            </div>
+            <div class="form-row">
+                <label for="pages">Pages:<span aria-label="required">*</span></label>
+                <input type="tel" name="pages" id="pages" required>
+            </div>
+            <div class="form-row">
+                <h1>Have you read this book already?</h1>
+                <div>
+                    <input type="radio" id="read" name="read" value="Yes" checked>
+                    <label for="read">Yes</label>
+                </div>
+                <div>
+                    <input type="radio" id="read" name="read" value="No">
+                    <label for="read">No</label>
+                </div>
+            </div>
+            <div class="form-row"></div>
+        </form>
+    </div>
+
     <div id="bookCards">
 
 

@@ -89,3 +89,9 @@ content:url(svgs/trash-2.svg);
 content:url(svgs/book-open.svg);
 }
 
+
+/*Initially hide PopUpForm*/
+
+#popupForm {
+display:none;
+}
