@@ -41,6 +41,7 @@ body {
     background:none;
     border:none;
     margin-bottom:20px;
+    margin-left:25px;
 }
 
 #newBook img {
@@ -90,8 +91,98 @@ content:url(svgs/book-open.svg);
 }
 
 
-/*Initially hide PopUpForm*/
-
+/*Pop up form css */
 #popupForm {
-display:none;
+display:grid;
+grid-template-columns: 340px ;
+grid-template-rows:repeat(auto-fit);
+justify-content: center;
+margin-bottom:20px;
+
 }
+
+#popupForm form {
+padding: 20px;
+border:solid cadetblue 5px;
+box-shadow: 3px 3px 3px rgba(95, 158, 160, 0.473);
+border-radius:15px;
+}
+
+
+.form-row1 {
+display:grid;
+grid-template-columns: 60px 180px;
+grid-template-rows: 25px;
+margin-bottom:20px;
+}
+
+.form-row1 label {
+justify-self:end;
+}
+
+.form-row1 input[type="text"],
+.form-row1 input[type="tel"],
+.form-row1 input[type="radio"] {
+margin-left:30px;
+}
+
+.form-row1 input[type="text"],
+.form-row1 input[type="tel"] {
+font-family:Fira Sans;
+width:190px;
+appearance:none;
+background-color:bisque;
+border-radius:5px;
+border:none;
+outline:none;
+
+}
+
+.form-row1 input[type="text"]:focus,
+.form-row1 input[type="tel"]:focus {
+border:solid 1px gray;
+box-shadow: 3px 3px 7px gray ;
+
+} 
+
+.radios label {
+    cursor:pointer;
+}
+
+input[type="radio"]{
+    cursor:pointer;
+}
+
+
+input[type="submit"] {
+display:flex;
+margin-left:auto;
+margin-right:auto;
+
+}
+
+.form-row2 input{
+    border:solid 1px gray;
+    border-radius:10px;
+    background:none;
+    font-family: Fira Sans;
+    padding:5px 10px;
+    cursor:pointer;
+}
+
+.form-row2 input:active {
+    transform:scale(.95);
+    box-shadow:inset 2px 2px 4px gray;
+}
+
+
+
+/*Initially hide PopUpForm*/
+.formHidden {
+display:none !important;
+}
+
+.formDisplay {
+display:block;
+}
+

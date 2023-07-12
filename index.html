@@ -13,32 +13,41 @@
     <div class="title"> Book Library</div>
     <div class="newBookBtn"><button id="newBook"><span><img src="svgs/plus-square.svg" alt="plus symbol">New Book</span></button></div>
     
-    <div id="popupForm">
-        <form action="" method="post">
-            <div class="form-row">
+    <div id="popupForm" class="formHidden">
+        <form action="" method="">
+            <div class="form-row1">
                 <label for="author">Author:<span aria-label="required">*</span></label>
                 <input type="text" id="author" name="author" minlength="2" required>
             </div>
-            <div class="form-row">
+            <div class="form-row1">
                 <label for="title">Title:<span aria-label="required">*</span></label>
                 <input type="text" id="title" name="title" minlength="2" required>
             </div>
-            <div class="form-row">
+            <div class="form-row1">
                 <label for="pages">Pages:<span aria-label="required">*</span></label>
                 <input type="tel" name="pages" id="pages" required>
             </div>
-            <div class="form-row">
-                <h1>Have you read this book already?</h1>
-                <div>
-                    <input type="radio" id="read" name="read" value="Yes" checked>
-                    <label for="read">Yes</label>
-                </div>
-                <div>
-                    <input type="radio" id="read" name="read" value="No">
-                    <label for="read">No</label>
-                </div>
+            <div class="form-row1">
+                <label for="read">Read?<span aria-label="required">*</span></label>
+                <span>
+                    <div class="radios">
+              
+                            <input type="radio" id="read1" name="read" value="Yes">
+                            <label for="read1">Yes</label>
+                   
+                            <input type="radio" id="read2" name="read" value="No" checked>
+                            <label for="read2">No</label>
+          
+                    </div>
+                </span>
             </div>
-            <div class="form-row"></div>
+            <div class="form-row1">
+                <label for="year">Year:<span aria-label="required">*</span></label>
+                <input type="tel" name="year" id="year" required>
+            </div>
+            <div class="form-row2">
+                <input type="submit" value="Submit" id="submitButton">
+            </div>
         </form>
     </div>
 
